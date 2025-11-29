@@ -1,7 +1,3 @@
 export const Logs= () => {
-    return (
-        <h1>
-            Logs
-        </h1>
-    );
+    return <h1 className="text-3xl">Logs</h1>;
 }

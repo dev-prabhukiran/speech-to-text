@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main>
+      <main className='flex justify-center items-center'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/demo" element={<Demo />} />
