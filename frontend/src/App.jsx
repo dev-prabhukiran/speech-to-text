@@ -12,7 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <main className='flex justify-center items-center'>
+      <main className='flex flex-col items-center gap-6 px-8'>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/demo" element={<Demo />} />
