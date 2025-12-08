@@ -7,6 +7,8 @@ start_time=datetime.utcnow()
 
 @router.get("/health")
 async def health():
+    import logging
+    logging.getLogger("app").info("health check")
     return {"status" : "ok"}
 
 @router.get("/metrics")
