@@ -1,8 +1,13 @@
 from fastapi import FastAPI
 from app.api.health import router as health_router
+from app.config import get_settings
+from app.logging import setup_logging
+
+settings = get_settings()
+setup_logging(settings)
 
 app=FastAPI(
-    title="Speech to Text Backend",
+    title=settings.APP_NAME,
     version="0.1.0"
 )
 
