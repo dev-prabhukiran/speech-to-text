@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from app.api.health import router as health_router
 from app.config import get_settings
 from app.logging import setup_logging
+from app.ws.asr_ws import router as asr_router
 
 settings = get_settings()
 setup_logging(settings)
@@ -15,4 +16,4 @@ async def root():
     return {"message": "Backend is running"}
 
 
-app.include_router(health_router)
+app.include_router(health_router, asr_router)

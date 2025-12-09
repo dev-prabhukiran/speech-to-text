@@ -6,7 +6,6 @@ router = APIRouter()
 
 start_time = datetime.utcnow()
 
-
 @router.get("/health")
 async def health():
     import logging
